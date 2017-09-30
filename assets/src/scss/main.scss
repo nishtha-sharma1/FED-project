@@ -3,31 +3,320 @@
  * All scss here
  */
 
-
  @font-face {
   font-family: 'OpenSans-Regular';
-  src: url('assets/fonts/OpenSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('/assets/fonts/OpenSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
  @font-face {
   font-family: 'OpenSans-Bold';
-  src: url('assets/fonts/OpenSans-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('/assets/fonts/OpenSans-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
+ @font-face {
+  font-family: 'HelveticaNeue2';
+  src: url('/assets/fonts/HelveticaNeue2.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+ @font-face {
+  font-family: 'OpenSans-Light';
+  src: url('/assets/fonts/OpenSans-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+ @font-face {
+  font-family: 'OpenSans-Italic';
+  src: url('/assets/fonts/OpenSans-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 
 .header {
-	width:100%; 
-	display:inline-block; 
-	button {
-		border: 2px solid #216DDF; 
-		background-color:white;
-		border-radius:2px;
-		font-family:OpenSans-Bold;
-		color:#216DDF;
-		text-transform:uppercase;  
+	width:100%;
+	box-shadow: 0 5px 5px #888;
+}
+
+button {
+	border: 2px solid #216DDF; 
+	font-size:13px;
+	background-color:white;
+	border-radius:2px;
+	font-family:OpenSans-Bold;
+	color:#216DDF;
+	text-transform:uppercase;
+	padding:7px; 
+	margin-left:10px;
+	margin-top:5px;
 		.fa-map-marker{
 			margin-right:5px;
+			font-size:20px;
 		}
-	}   
+	}
+
+.hamburger {
+	border:none;
+	font-size:25px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	box-shadow: 0 0 2px 2px #888;
+
+	}	
+
+.header:first-child {
+	margin-left:5px;
 }
+
+.filter img {
+	position:relative;
+	z-index:-5;
+	margin-top:-10px;
+}
+
+.filter {
+	position:relative;
+}
+
+.dropdown-check-list {
+	background-color:#F6F6F6;
+	padding:30px;
+	position:relative; 
+	margin-top:-35px;
+		p {
+			float:left;
+			color:#216DDF;
+			font-family:OpenSans-Bold;
+			font-size:16px;
+			padding-top:15px;
+			margin-right:5px;
+		}
+		input {
+			padding:5px;
+			width:120px;
+		}
+		input::placeholder {
+			color:#3F3F3F;
+			font-family:OpenSans-Bold;
+			font-size:15px;
+			text-align:center;
+		}
+		input {
+			border:1px solid #D8D8D8;
+			padding-top:17px; 
+			padding-bottom:11px;
+			position:relative;
+			margin-left:0; 
+		}
+		.fa-sort-desc {
+			padding-top:15px;
+			padding-bottom:15px;
+			padding-right:19px;
+			border:1px solid #D8D8D8;
+			text-align:center;
+			font-size:12px;
+			position:relative; 
+		}	
+}
+.options {
+	background-color:#FFFFFF;
+	list-style:none;
+	padding-top:30px;
+	padding-left:30px; 
+	padding-bottom:25px;
+	.options:checkbox {
+		font-family:helvetica; 
+		font-size:16px;
+		color:#3F3F3F;
+	}
+}
+
+.options li {
+	margin-bottom:35px;
+}
+
+.options input[type=checkbox] {
+	display:none;
+}
+
+.options label {
+	font-family:HelveticaNeue2; 
+	font-size:16px;
+	color:#3F3F3F;
+}
+
+.options input[type=checkbox] + label {
+	background: url('/assets/images/commercial-radio-btn.png') left top no-repeat;
+	padding-left: 40px;
+}
+ 
+.options input[type=checkbox]:checked + label {
+	background: url('/assets/images/service-radio-btn.png') left top no-repeat;
+	display: block;
+	min-height: 23px;
+	padding-left: 50px;
+}
+
+.card-option {
+	box-shadow:0 0 10px 1px #ccc;
+	margin-right:15px; 
+	margin-left:15px; 
+}
+
+
+.card-title {
+	font-family:OpenSans-Light;
+	text-align:center; 
+	display:block; 
+	padding-top:30px;
+	font-size:20px;   
+}
+
+.card-option button {
+	display:block;
+	margin:15px auto;
+	color:#FEFEFE;
+	font-size:20px; 
+	padding-bottom:0;
+	font-family:OpenSans-Bold;
+		.fa-phone {
+			display:inline-block; 
+			color:#FEFEFE;
+			background-color:#083D8C;
+			padding:5px;
+			margin-bottom:5px;
+		}
+		.tap {
+			font-family:OpenSans-Bold;
+			font-size:9px;
+			display:inline-block;
+		}
+	background-color:#216DDF; 
+}
+
+
+.contact-pro p {
+	display:block; 
+	font-family:OpenSans-Italic;
+	font-size:11px;
+	text-align:center;
+	margin:0 auto;  
+}
+
+.contact-pro button {
+	border:1px solid #02C7C6;
+	font-family:OpenSans-Bold;
+	color:#083D8C; 
+	font-size:15px;
+	background-color:#FEFEFE;
+	text-transform:none;
+	padding:17px; 
+
+	.fa-envelope {
+		color:#083D8C;
+		margin-right:12px; 
+	}
+}
+
+.business-hour-container {
+	display:block; 
+}
+
+.business-hours {
+	text-align:center; 
+	padding-top:20px;
+	padding-bottom:20px; 
+
+	li {
+		font-family:OpenSans-Regular; 
+		font-family:13px;
+		margin-bottom:10px;
+		list-style:none;  
+	}
+	li:first-child {
+		font-family:OpenSans-Bold;
+	}
+}
+
+.card-footer {
+	background-color:#F6F6F6;
+}
+
+.card-footer-list {
+	padding:25px; 
+}
+
+.card-footer-list li {
+	display:inline-block; 
+	margin-right:40px;
+	padding-bottom:10px; 
+	font-family:OpenSans-Regular; 
+	font-size:11px;
+	color:#3F3F3F; 
+	.fa-star, .fa-sun-o, .fa-home, .fa-users {
+		padding-right:10px;
+	}
+}
+
+.social-footer {
+	background-color:#083D8C;
+	padding:40px 40px 15px 40px;
+	img {
+		display:block; 
+		margin:0 auto; 
+	}
+	p {
+		font-family:OpenSans-Bold;
+		font-size:15px;
+	}
+	p, i {
+		color:#FFFFFF; 
+		display:inline-block; 
+		margin-top:35px;
+	}
+
+	i {
+		float:right; 
+		margin-right:10px;
+		font-size:20px;
+	}
+}
+
+.copyright-footer {
+	background-color:#216DDF; 
+	font-family:OpenSans-Light;
+	font-size:12px;
+	color:#FFFFFF;
+	text-align:center; 
+	font-weight:100;
+	padding-top:25px; 
+	padding-bottom:25px; 
+	padding-right:10px; 
+	padding-left:5px;  
+	a {
+		color:#FFFFFF; 
+		text-decoration:none;
+		margin-right:5px;
+		margin-left:5px;  
+	} 
+	.fa-external-link {
+		margin-left:5px; 
+	}
+	hr {
+		width:328px; 
+		margin-left:20px; 
+	}
+}
+
+
+
+
+/// background-image for header: <img src="assets/images/water-image.png" alt="water-logo"> 
+
+///nav html - for hamburger menu 
+// <nav class="drop-menu"> 
+				//<ul>
+					//<a href="#"><li>Dummy Link 1</li></a>
+					//<a href="#"><li>Dummy Link 2</li></a>
+					//<a href="#"><li>Dummy Link 3</li></a>	
+				//</ul> 	
+			//</nav>
+
+
 
