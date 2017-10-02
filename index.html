@@ -11,18 +11,32 @@
 <body>
 	<main>
 		<header class=header>
+			<div class="desktop-header">
+				<a href="#">Dealers and Distributers</a> 
+				<a href="#">Commercial Service<i class="fa fa-external-link" aria-hidden="true"></i></a> 
+			</div>
 			<img src="assets/images/header-content-vector.png" alt="pool-pro-logo">
-			<button type="button"><i class="fa fa-map-marker"></i>Find A Pro</button>
+			<button class="no-pool-pro"type="button"><i class="fa fa-map-marker"></i>Find A Pro</button>
 			<button class="hamburger">&#9776;</button>
+			<button class="cross">&#735;</button>
+				<nav class="drop-menu"> 
+					<ul>
+						<li>Menu</li>
+						<li>Pools &#38;Spas<a href="#">next</a></li>
+						<li>Supplies<a href="#">next</a></li>
+						<li>Resources<a href="#">next</a></li>
+						<li>Services<a href="#">next</a></li>
+						<li>
+							<button class="pool-pro"type="button"><i class="fa fa-map-marker"></i>Find A Pool Pro</button>
+						</li>	
+					</ul> 	
+				</nav>
 		</header>
 		
 		<section class="filter">
-			<img src="assets/images/water-image.png" alt="water-logo">
-			
 			<form id="list1" class="dropdown-check-list" tabindex="100">
-				<p>7 dealers in 29707</p>
-				<input name="Filter Results" placeholder="Filter Results">
-					<i class="fa fa-sort-desc" aria-hidden="true"></i>	
+				<p>7 dealers in 29707 </p> 
+				<input name="Filter Results" placeholder="Filter Results"><i class="fa fa-sort-desc" aria-hidden="true"></i>
 					<ul class="options">
 						<li >
 							<input type="checkbox" name="results" value="services" id="services" checked />
@@ -46,8 +60,45 @@
 		</section>
 
 		<div class="cards">
+
+	<div class="contact-a-pro" id="contact-box">
+			<form id="contact-pro-form" action="message" method="post"> 
+					<div class="form-title">
+						<h1>Email</h1>
+						<p>Aqua Experts</p>
+					</div>
+					<div class="name">
+					<p class="fill-out">Fill out the form below and Aqua Experts will get in touch.</p>
+						<label for="name">First and last Name<i class="fa fa-check-circle-o" aria-hidden="true"></i></label>
+						<input type="text" id="name" name="first-last-name">
+					</div>
+					<div class="phone">
+						<label for="phone">Phone number</label>
+						<input type="text" id="phone" name="phone-number">
+					</div>	
+					<div class="email">
+						<label for="mail">Email address</label>
+						<input type="email" id="email" name="email-address">
+					</div>
+					<div class="comments">
+						<label for="comments">Comments or questions</label>
+						<textarea id="comments" name="comments"></textarea> 
+					</div>
+					<div class="pool-question">
+						<label for="pool-question">Do you currently own a pool or spa?</label>
+						<input type="checkbox" id="pool-question" name="pool-question" value="yes">
+						<label for="pool-question">Yes</label>
+						<input type="checkbox" id="pool-question" name="pool-question" value="no">
+						<label for="pool-question">No</label> 
+					</div>
+					<hr>
+					<button type="submit">Send</button>
+				</form>
+		</div>
+
 			<div class="card-option">
 				<h1 class=card-title> Aqua Experts </h1>
+				<hr>
 				<button type="button"> 
 					<i class="fa fa-phone" aria-hidden="true"></i>
 					<p class="tap"> Tap to call </p>
@@ -55,7 +106,7 @@
 				</button>
 				<div class="contact-pro">
 					<p>Can't talk now? Click below to send an email.</p>
-					<button type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
+					<button id="contact-pro" type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
 				</div>
 				<div class="business-hour-container">
 					<ul class="business-hours">
@@ -75,6 +126,7 @@
 			</div>
 			<div class="card-option">
 				<h1 class=card-title> Premium Pools &#38; Spas <br> of Charlotte </h1>
+				<hr>
 				<button type="button"> 
 					<i class="fa fa-phone" aria-hidden="true"></i>
 					<p class="tap"> Tap to call </p>
@@ -82,7 +134,7 @@
 				</button>
 				<div class="contact-pro">
 					<p>Can't talk now? Click below to send an email.</p>
-					<button type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
+					<button id="contact-pro" type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
 				</div>
 				<div class="business-hour-container">
 					<ul class="business-hours">
@@ -103,6 +155,7 @@
 			</div>
 			<div class="card-option">
 				<h1 class=card-title> Carolina Pool Specialists </h1>
+				<hr>
 				<button type="button"> 
 					<i class="fa fa-phone" aria-hidden="true"></i>
 					<p class="tap"> Tap to call </p>
@@ -110,7 +163,7 @@
 				</button>
 				<div class="contact-pro">
 					<p>Can't talk now? Click below to send an email.</p>
-					<button type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
+					<button id="contact-pro" type="button" ><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
 				</div>
 				<div class="business-hour-container">
 					<ul class="business-hours">
@@ -130,8 +183,6 @@
 				</div>
 			</div>
 		</div>
-
-
 		<footer class="footer-main">
 			<div class="social-footer">
 				<img src="assets/images/pool-pros-logo-footer.png" alt="bottom-logo">
@@ -143,7 +194,7 @@
 				</div>
 			</div>
 			<div class="copyright-footer">
-					<p> <a href="#">Dealers and Distributers</a> | <a href="#">Commercial Service<i class="fa fa-external-link" aria-hidden="true"></i></a></p> 
+					<p class="dealers"> <a href="#">Dealers and Distributers</a> | <a href="#">Commercial Service<i class="fa fa-external-link" aria-hidden="true"></i></a></p> 
 					<hr>
 					<p><i class="fa fa-copyright" aria-hidden="true"></i> 2017 Pool Pros | <a href="#">Privacy Policy </a> | <a href="#">Terms and Conditions</a></p>
 				</div>
@@ -152,7 +203,10 @@
 
 
 
+
 	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="/assets/dist/js/main.js"></script>
+	
 </body>
 </html>
