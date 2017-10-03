@@ -17,7 +17,7 @@
 			</div>
 			<img src="assets/images/header-content-vector.png" alt="pool-pro-logo">
 			<button class="no-pool-pro"type="button"><i class="fa fa-map-marker"></i>Find A Pro</button>
-			<button class="hamburger">&#9776;</button>
+			<button class="hamburger"><img src="assets/images/hamburger.png"></button>
 			<button class="cross">&#735;</button>
 				<nav class="drop-menu"> 
 					<ul>
@@ -26,87 +26,54 @@
 						<li>Supplies<a href="#">next</a></li>
 						<li>Resources<a href="#">next</a></li>
 						<li>Services<a href="#">next</a></li>
+					</ul> 	
+				</nav>
+				<nav class="desktop-nav">
+						<ul>
+							<li><a href="#">Pools &#38; Spas</a></li>
+							<li><a href="#">Supplies</a></li>
+							<li><a href="#">Resources</a></li>
+							<li><a href="#">Services</a></li>
 						<li>
 							<button class="pool-pro"type="button"><i class="fa fa-map-marker"></i>Find A Pool Pro</button>
 						</li>	
-					</ul> 	
+					</ul> 
 				</nav>
 		</header>
 		
 		<section class="filter">
 			<form id="list1" class="dropdown-check-list" tabindex="100">
-				<p>7 dealers in 29707 </p> 
-				<input name="Filter Results" placeholder="Filter Results"><i class="fa fa-sort-desc" aria-hidden="true"></i>
+					<p>7 dealers in 29707 </p> 
+					<input name="Filter Results" placeholder="Filter Results"><i class="fa fa-sort-desc" aria-hidden="true"></i>
 					<ul class="options">
 						<li >
-							<input type="checkbox" name="results" value="services" id="services" checked />
+							<input type="checkbox" name="results" value="services" class="services" checked />
 							<label class="choice" for="services">Services</label>
 						</li>
 						<li>
-							<input type="checkbox" name="results" value="installation" id="installation" checked/>
+							<input type="checkbox" name="results" value="installation" class="installation" checked/>
 							<label class="choice" for="installation">Installation</label>
 						</li>
 						<li>
-							<input type="checkbox" name="results" value="residential" id="residential" checked/>
+							<input type="checkbox" name="results" value="residential" class="residential" checked/>
 							<label class="choice" for="residential">Residential</label>
 						</li>
 						<li>
-							<input type="checkbox" name="results" value="commercial" id="commercial"/>
-							<label class="choice" for="commercial">Commercial</label>
+							<input type="checkbox" name="results" value="commercial" class="commercial"/>
+							<label class="choice" for="commercial">Commercial<i class="fa fa-question-circle" aria-hidden="true"></i></label>
 						</li>
 					</ul>	
 			</form>
-
 		</section>
 
 		<div class="cards">
-
-	<div class="contact-a-pro" id="contact-box">
-			<form id="contact-pro-form" action="message" method="post"> 
-					<div class="form-title">
-						<h1>Email</h1>
-						<p>Aqua Experts</p>
-					</div>
-					<div class="name">
-					<p class="fill-out">Fill out the form below and Aqua Experts will get in touch.</p>
-						<label for="name">First and last Name<i class="fa fa-check-circle-o" aria-hidden="true"></i></label>
-						<input type="text" id="name" name="first-last-name">
-					</div>
-					<div class="phone">
-						<label for="phone">Phone number</label>
-						<input type="text" id="phone" name="phone-number">
-					</div>	
-					<div class="email">
-						<label for="mail">Email address</label>
-						<input type="email" id="email" name="email-address">
-					</div>
-					<div class="comments">
-						<label for="comments">Comments or questions</label>
-						<textarea id="comments" name="comments"></textarea> 
-					</div>
-					<div class="pool-question">
-						<label for="pool-question">Do you currently own a pool or spa?</label>
-						<input type="checkbox" id="pool-question" name="pool-question" value="yes">
-						<label for="pool-question">Yes</label>
-						<input type="checkbox" id="pool-question" name="pool-question" value="no">
-						<label for="pool-question">No</label> 
-					</div>
-					<hr>
-					<button type="submit">Send</button>
-				</form>
-		</div>
-
 			<div class="card-option">
 				<h1 class=card-title> Aqua Experts </h1>
 				<hr>
-				<button type="button"> 
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					<p class="tap"> Tap to call </p>
-					1.888.888.8888
-				</button>
+				<button type="button"> <i class="fa fa-phone" aria-hidden="true"></i><p class="tap"> Tap to call </p>1.888.888.8888</button>
 				<div class="contact-pro">
 					<p>Can't talk now? Click below to send an email.</p>
-					<button id="contact-pro" type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
+					<button class="js-contact-pro" type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
 				</div>
 				<div class="business-hour-container">
 					<ul class="business-hours">
@@ -134,7 +101,7 @@
 				</button>
 				<div class="contact-pro">
 					<p>Can't talk now? Click below to send an email.</p>
-					<button id="contact-pro" type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
+					<button class="js-contact-pro" type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
 				</div>
 				<div class="business-hour-container">
 					<ul class="business-hours">
@@ -163,7 +130,7 @@
 				</button>
 				<div class="contact-pro">
 					<p>Can't talk now? Click below to send an email.</p>
-					<button id="contact-pro" type="button" ><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
+					<button class="js-contact-pro" type="button" ><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
 				</div>
 				<div class="business-hour-container">
 					<ul class="business-hours">
@@ -200,13 +167,49 @@
 				</div>
 			</div>
 		</footer>
-
-
-
-
 	</main>
+	<div class="contact-a-pro" class="contact-box">
+		<form class="contact-pro-form" action="message" method="post"> 
+			<div class="form-title">
+				<h1>Email</h1>
+				<p>Premium Pools &#38; Spas <br> of Charlotte</p>
+			</div>
+			<div class="name">
+				<p class="fill-out">Fill out the form below and Premium Pools &#38; Spas of Charlotte will get in touch.</p>
+				<label for="name">First and last Name</i></label>
+				<img class="check" src="assets/images/check.png" alt="check">
+				<input class="check-change" type="text" name="first-last-name">
+				<img class="check" src="assets/images/circle.png" alt="check"> 
+			</div>
+			<div class="phone">
+				<label for="phone">Phone number</label>
+				<img class="check" src="assets/images/check.png" alt="check">
+				<img class="phone-check"src="assets/images/circle.png" alt="check">
+				<input class="check-change" type="text" name="phone-number">
+			</div>	
+			<div class="email">
+				<label for="mail">Email address</label>
+				<img class="check" src="assets/images/check.png" alt="check">
+				<input class="check-change" type="email" name="email-address">
+				<img class="check" src="assets/images/circle.png" alt="check"> 
+			</div>
+			<div class="comments">
+				<label for="comments">Comments or questions</label>
+				<p>optional<p>
+				<textarea name="comments"></textarea> 
+			</div>
+			<div class="pool-question-div">
+				<p class="pool-spa">Do you currently own a pool or spa?</p>
+				<input type="checkbox" class="pool-question" name="pool-question" value="yes">
+				<label for="pool-question">Yes</label>
+				<input type="checkbox" class="pool-question" name="pool-question" value="no">
+				<label for="pool-question">No</label> 
+			</div>
+			<hr>
+			<button type="submit">Send</button>
+		</form>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="/assets/dist/js/main.js"></script>
-	
 </body>
 </html>

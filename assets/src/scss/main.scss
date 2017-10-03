@@ -3,6 +3,7 @@
  * All scss here
  */
 
+//all fonts 
  @font-face {
   font-family: 'OpenSans-Regular';
   src: url('/assets/fonts/OpenSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
@@ -28,18 +29,28 @@
   src: url('/assets/fonts/OpenSans-ExtraBold.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
+///all variables  
 $font-stack-bold:OpenSans-Bold;
 $font-stack-reg:OpenSans-Regular; 
 $font-stack-light:OpenSans-Light; 
 $width-full:100%;
 $font-stack-extra-bold:OpenSans-ExtraBold; 
+$border-color:#0BC9C8;
+$white:#FFFFFF;
+
+///mixins 
 @mixin border-radius($radius) {
 	border-radius:$radius; 
 }
+
+///header section - everything in the header 
 .header {
 	width:$width-full;
 	box-shadow:0 8px 6px -6px #888;	
 	overflow:auto; 
+}
+.header:first-child {
+	margin-left:15px;
 }
 .desktop-header {
 	display:none; 
@@ -47,9 +58,11 @@ $font-stack-extra-bold:OpenSans-ExtraBold;
 .drop-menu {
 	display:none; 
 	z-index:1000000;
+	border-top:4px solid $border-color; 
+	border-bottom:4px solid $border-color; 
     position:absolute;
 	font-size:12px;
-	background-color:#FFFFFF;
+	background-color:$white;
 	li {
 		font-family:HelveticaNeue2; 
 		font-size:18px;
@@ -59,14 +72,17 @@ $font-stack-extra-bold:OpenSans-ExtraBold;
 		color:#616161;	 
 	} 
 	li:first-child{
-		background-color:#FFFFFF; 
+		background-color:$white; 
 		color:#216DDF; 
 		text-align:center;  
 		text-transform:uppercase;
 		font-weight:900;  
 	}
+	li:nth-child(5n) {
+		margin-bottom:0px; 
+	}
 	a {
-		color:#0BC9C8;
+		color:$border-color;
 		text-transform:lowercase;
 		text-decoration:none; 
 		float:right; 
@@ -94,10 +110,10 @@ button {
 			margin-right:5px;
 			font-size:20px;
 		}
-	}
+}
 .hamburger {
 	border:none;
-	font-size:25px;
+	font-size:25px; 
 	width:50px;
 	height:50px;
 	border-radius:50%;
@@ -105,12 +121,9 @@ button {
 	}
 .cross {
 	display:none; 
-	color:#0BC9C8;
+	color:$border-color;
 	font-size:40px;
 	border:none;   
-}
-.header:first-child {
-	margin-left:15px;
 }
 .filter {
 	position:relative;
@@ -142,21 +155,26 @@ button {
 		input {
 			border:1px solid #D8D8D8;
 			padding-top:17px; 
-			padding-bottom:11px;
+			padding-bottom:15px;
 			position:relative;
 			margin-left:0; 
 			width:120px;
-		}
-		.fa-sort-desc {
-			padding-top:15px;
-			padding-bottom:15px;
-			padding-right:19px;
+			float:left;
+		}	
+}
+.fa-sort-desc {
+			padding:15px 15px 15px 14px; 
 			border:1px solid #D8D8D8;
 			text-align:center;
 			font-size:12px;
 			position:relative; 
-		}	
+		}
+
+.desktop-nav {
+	display:none; 
 }
+
+//media query for the header 		
 
 @media (min-width:473px) {
 	.desktop-header {
@@ -167,7 +185,7 @@ button {
 		text-align:right;
 		a {
 			text-decoration:none;
-			color:#FFFFFF; 
+			color:$white; 
 			font-family:$font-stack-reg; 
 			font-size:12px;
 			padding-right:5px;
@@ -179,16 +197,18 @@ button {
 	.no-pool-pro {
 		display:none; 
 	}
+	
 	.hamburger {
 		display:none; 
 	}
-	.drop-menu { 
+	//navigation menu for header
+	.desktop-nav { 
 		display:inline-block; 
 		font-family:$font-stack-bold; 
 		font-size:15px;
 		text-align:right;  
 			ul {
-				padding-left:130px; 
+				padding-left:390px;
 			}
 			li {
 				display:inline-block;  
@@ -200,16 +220,17 @@ button {
 			}
 			a:hover{
 				color:pink; 
-			}	
+			}				
 	}
 	.pool-pro{
 		display:inline-block;
-		margin-top:20px;    
+		margin-top:20px;
+		margin-left:90px;     
 	}
 }
-
+//Checklist dropdown for mobile 
 .options {
-	background-color:#FFFFFF;
+	background-color:$white;
 	list-style:none;
 	padding-top:30px;
 	padding-left:30px; 
@@ -220,26 +241,21 @@ button {
 		color:#3F3F3F;
 	}
 }
-
 .options li {
 	margin-bottom:35px;
 }
-
 .options input[type=checkbox] {
 	display:none;
 }
-
 .options label {
 	font-family:HelveticaNeue2; 
 	font-size:16px;
 	color:#3F3F3F;
 }
-
 .options input[type=checkbox] + label {
 	background: url('/assets/images/commercial-radio-btn.png') left top no-repeat;
 	padding-left: 40px;
 }
- 
 .options input[type=checkbox]:checked + label {
 	background: url('/assets/images/service-radio-btn.png') left top no-repeat;
 	display: block;
@@ -248,11 +264,13 @@ button {
 }
 
 
+//Media query for the check list box section 
+
 @media (min-width:800px) {
 	.filter {
 		background-image:url("/assets/images/full-water-image.png");
 	}
-	
+
 	.dropdown-check-list {
 		display:inline-block; 
 		max-width:1279px;
@@ -263,38 +281,36 @@ button {
 			display:none; 
 		}
 	}
-
 	.dropdown-check-list {
 		input {
 			background-color:#F6F6F6;
 			border-left:1px solid #D8D8D8;
 			border-top:none;
 			border-right:none;
-			border-bottom:none;  
+			border-bottom:none; 
+			padding-top:30px;   
 		}
 		p {
-			padding-top:10px; 
+			padding-top:30px; 
 		}
 	}
-
 	.options {
 		padding:0; 
 		display:inline-block; 
 		background-color:#F6F6F6;
 		li {
-			display:inline-block; 
-
+			display:inline-block;
+			padding-top:20px; 
+			padding-left:10px;  
 		}
 	}
 }
-
-
+//Cards section 
 .card-option {
 	box-shadow:0 0 10px 1px #ccc;
 	margin-right:15px; 
 	margin-left:15px; 
 }
-
 .card-title {
 	font-family:$font-stack-light;
 	text-align:center; 
@@ -302,11 +318,9 @@ button {
 	padding-top:30px;
 	font-size:20px;   
 }
-
-hr {
+.cards hr {
 	display:none; 
 }
-
 .card-option button {
 	display:block;
 	margin:15px auto;
@@ -328,7 +342,6 @@ hr {
 		}
 	background-color:#216DDF; 
 }
-
 
 .contact-pro p {
 	display:block; 
@@ -352,11 +365,9 @@ hr {
 		margin-right:12px; 
 	}
 }
-
 .business-hour-container {
 	display:block; 
 }
-
 .business-hours {
 	text-align:center; 
 	padding-top:20px;
@@ -372,15 +383,12 @@ hr {
 		font-family:$font-stack-bold;
 	}
 }
-
 .card-footer {
 	background-color:#F6F6F6;
 }
-
 .card-footer-list {
 	padding:25px; 
 }
-
 .card-footer-list li {
 	display:inline-block; 
 	margin-right:40px;
@@ -393,6 +401,7 @@ hr {
 	}
 }
 
+//Media query for cards section  
 @media (min-width:900px) {
 	.cards {
 		width:$width-full;
@@ -413,13 +422,14 @@ hr {
 		display:inline-block; 
 		@include  border-radius(10px);
 			hr {
+		display:block; 
 		width:275px; 
 		margin:0 auto;
 		color:#ECECEC;  
 		}
 	}
 	.card-option button {
-		background-color:#FFFFFF;
+		background-color:$white;
 		border:none;  
 		display:block;
 		margin:15px auto;
@@ -454,10 +464,7 @@ hr {
 	}	
 
 }
-
-
-
-
+///Footer information 
 .footer-main {
 	background-color:#083D8C;
 	width:$width-full;
@@ -471,7 +478,7 @@ hr {
 		padding-right:60px;  
 	}
 	.social-icons {
-	color:#FFFFFF;
+	color:$white;
 	font-size:15px;
 	margin-top:35px; 
 		p {
@@ -488,8 +495,7 @@ hr {
 		}
 	}
 }
-
-
+//Media Querie for the cards  
 @media (min-width:380px) { 
 	.social-footer {
 		.social-icons {
@@ -503,13 +509,11 @@ hr {
 		}
 	}
 }
-
-
 .copyright-footer {
 	background-color:#216DDF; 
 	font-family:$font-stack-light;
 	font-size:12px;
-	color:#FFFFFF;
+	color:$white;
 	text-align:center; 
 	font-weight:100;
 	padding-top:25px; 
@@ -519,7 +523,7 @@ hr {
 	padding-left:5px;
 	width:$width-full;    
 	a {
-		color:#FFFFFF; 
+		color:$white; 
 		text-decoration:none;
 		margin-right:5px;
 		margin-left:5px;  
@@ -532,8 +536,6 @@ hr {
 		margin-left:20px; 
 	}
 }
-
-
 @media (min-width:380px) { 
 	.dealers {
 		display:none; 
@@ -545,14 +547,19 @@ hr {
 	}
 }
 
-
+//Style for pop-up contact form  
 .contact-a-pro {
 	display:none; 
-	z-index:99999;
+	z-index:99999; 
+    background-color: white;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    max-width:405px; 
 }
 .form-title {
 	background-color:#083D8C; 
-	color:#FFFFFF; 
+	color:$white; 
 	padding:20px 10px 20px 15px; 
 	h1 {
 		font-family:$font-stack-bold;
@@ -563,73 +570,135 @@ hr {
 	p {
 		font-size:20px; 
 		font-family:$font-stack-light; 
+		line-height:25px;
 	}
 }
 .fill-out {
 	font-family:$font-stack-reg;
 	color:#616161;
 	font-size:15px;
-	padding-top:40px;
-	padding-bottom:40px;
-	padding-left:10px;   	 
+	padding-top:30px;
+	padding-bottom:30px;  	 
 }
-
-input, textarea {
+.contact-a-pro input, textarea {
 	border:1px solid #D8D8D8; 
-	display:block;
-	width:100%; 
+	padding-right:190px;
 }
-
-.phone {
-	max-width:250px; 
-}
-
 .contact-a-pro input {
-	padding:10px 30px 10px 10px; 
+	padding:10px 190px 10px 10px; 
 }
-
-.name, .phone, .email, .comments, .pool-question {
-	margin:15px auto; 
-	margin-left:10px;
+.name {
+	padding-bottom:30px; 
+	padding-left:10px; 
 }
-
+.phone {
+	@extend .name; 
+}
+.email {
+	@extend .name; 
+}
+.comments {
+	@extend .name;
+}
+.pool-question-div {
+	padding-left:10px; 
+}
+.phone input {
+	max-width:50px; 
+}
 label {
 	font-size:14px; 
 	color:#616161; 
 	font-family:$font-stack-bold;
 }
-
 .contact-a-pro hr {
 	width:345px; 
 	margin:0 auto; 
-}	
-
+}
 .contact-a-pro button {
 	border:none; 
 	font-size:15px; 
 	font-family:$font-stack-bold; 
-	color:#0BC9C8;
+	color:$border-color;
 	text-transform:uppercase; 
 	float:right; 
 	padding-right:25px; 
 }
+.comments p {
+	color:#BEBEBE;
+	font-size:14px;
+	font-family:OpenSans-Italic; 
+	float:right;
+	padding-right:10px;  
+}
+.comments label {
+	display:inline-block; 
+}
+.comments textarea {
+	margin-bottom:10px;
+	margin-right:10px; 
+	//max-width:317px; 
+	height:84px; 
+}
+.pool-question-div p {
+	font-size:14px; 
+	color:#616161; 
+	font-family:$font-stack-bold;
+	padding-bottom:20px; 
+}
+.pool-question-div {
+	padding-bottom:20px; 
+}
+input[type=checkbox] {
+	display:none; 
+}
+input[type=checkbox] + label {
+	background: url("/assets/images/residential-radio-btn-copy.png") bottom left no-repeat;
+	min-height: 20px;
+	padding-left: 35px;
+	display:inline-block;  
+}		
+input[type=checkbox]:checked + label {
+	background: url("/assets/images/service-radio-btn.png") no-repeat;
+	min-height: 20px;
+	padding-left: 35px;
+	display:inline-block; 
+}
+.check {
+	display:none; 
+	float:right;
+	padding-right:20px; 
+	padding-bottom:10px;  
+}
 
-
+.phone-check {
+	display:none; 
+	float:right; 
+	padding-right:100px; 
+	padding-bottom:10px; 
+}
+//Mask background for when the form pops up  
 #mask {
     display: none;
     background: #000;
     position: fixed;
     left: 0;
     top: 0;
-    //z-index: 10;
+    z-index: 10;
     width: 100%;
     height: 100%;
     opacity: 0.5;
     z-index: 990;
 }
-
-
-
+/*
+.pool-question label {
+	background: url("/assets/images/service-radio-btn.png") no-repeat;
+	min-height: 20px;
+	padding-left: 35px;
+	padding-top:10px; 
+	display:inline-block; 
+}
+*/
 
 
 
