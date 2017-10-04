@@ -45,9 +45,9 @@ $white:#FFFFFF;
 
 ///header section - everything in the header 
 .header {
-	width:$width-full;
 	box-shadow:0 8px 6px -6px #888;	
 	overflow:auto; 
+	width:$width-full;
 }
 .header:first-child {
 	margin-left:15px;
@@ -56,37 +56,37 @@ $white:#FFFFFF;
 	display:none; 
 }
 .drop-menu {
-	display:none; 
-	z-index:1000000;
-	border-top:4px solid $border-color; 
-	border-bottom:4px solid $border-color; 
-    position:absolute;
-	font-size:12px;
 	background-color:$white;
+	border-bottom:4px solid $border-color; 
+	border-top:4px solid $border-color; 
+	display:none; 
+	font-size:12px;
+	z-index:1000000;
+    position:absolute;
 	li {
+		background-color:#F6F6F6; 
+		color:#616161;	 
 		font-family:HelveticaNeue2; 
 		font-size:18px;
-		background-color:#F6F6F6; 
-		padding:40px 15px 40px 10px; 
 		margin-bottom:5px;  
-		color:#616161;	 
+		padding:40px 15px 40px 10px; 
 	} 
 	li:first-child{
 		background-color:$white; 
 		color:#216DDF; 
+		font-weight:900;  
 		text-align:center;  
 		text-transform:uppercase;
-		font-weight:900;  
 	}
 	li:nth-child(5n) {
 		margin-bottom:0px; 
 	}
 	a {
 		color:$border-color;
-		text-transform:lowercase;
-		text-decoration:none; 
 		float:right; 
 		padding-left:175px; 
+		text-decoration:none; 
+		text-transform:lowercase;
 	}
 	a:hover {
 		color:#216DDF;
@@ -96,55 +96,57 @@ $white:#FFFFFF;
 	display:none; 
 }
 button {
-	border: 2px solid #216DDF; 
-	font-size:13px;
-	background-color:white;
 	@include border-radius(2px); 
-	font-family:$font-stack-bold;
+	background-color:white;
+	border: 2px solid #216DDF; 
 	color:#216DDF;
-	text-transform:uppercase;
-	padding:7px; 
+	font-family:$font-stack-bold;
+	font-size:13px;
 	margin-left:10px;
 	margin-top:5px;
+	padding:7px; 
+	text-transform:uppercase;
 		.fa-map-marker{
-			margin-right:5px;
 			font-size:20px;
+			margin-right:5px;
 		}
 }
 .hamburger {
-	border:none;
-	font-size:25px; 
-	width:50px;
-	height:50px;
 	border-radius:50%;
+	border:none;
 	box-shadow: 0 0 2px 2px #888;
+	font-size:25px; 
+	height:50px;
+	width:50px;
 	}
 .cross {
-	display:none; 
+	border:none;
 	color:$border-color;
+	display:none; 
+	float:right;
 	font-size:40px;
-	border:none;   
+	padding-right:20px;    
 }
 .filter {
-	position:relative;
 	background-image:url("/assets/images/water-image.png");
 	background-position:top;
-	z-index:-5;
 	border:1px solid white;
 	margin-top:-10px;  
+	position:relative;
+	z-index:-5;
 }
 .dropdown-check-list {
 	background-color:#F6F6F6;
+	margin-top:115px; 
 	padding:30px;
 	position:relative; 
-	margin-top:115px; 
-		p {
-			float:left;
+		h1 {
 			color:#216DDF;
+			float:left;
 			font-family:$font-stack-bold;
 			font-size:16px;
-			padding-top:15px;
 			margin-right:5px;
+			padding-top:15px;
 		}
 		input::placeholder {
 			color:#3F3F3F;
@@ -154,20 +156,20 @@ button {
 		}
 		input {
 			border:1px solid #D8D8D8;
-			padding-top:17px; 
-			padding-bottom:15px;
-			position:relative;
-			margin-left:0; 
-			width:120px;
 			float:left;
+			margin-left:0; 
+			padding-bottom:15px;
+			padding-top:17px; 
+			position:relative;
+			width:120px;
 		}	
 }
 .fa-sort-desc {
-			padding:15px 15px 15px 14px; 
 			border:1px solid #D8D8D8;
-			text-align:center;
 			font-size:12px;
+			padding:15px 15px 15px 14px; 
 			position:relative; 
+			text-align:center;
 		}
 
 .desktop-nav {
@@ -178,17 +180,17 @@ button {
 
 @media (min-width:473px) {
 	.desktop-header {
-		display:inline-block; 
-		width:$width-full;
 		background-color:#083D8C;
+		display:inline-block; 
 		padding:15px 15px 15px 0px;
 		text-align:right;
+		width:$width-full;
 		a {
-			text-decoration:none;
 			color:$white; 
 			font-family:$font-stack-reg; 
 			font-size:12px;
 			padding-right:5px;
+			text-decoration:none;
 		}
 		.fa-external-link {
 			padding-left:5px;
@@ -215,8 +217,8 @@ button {
 				padding:15px;	
 			}
 			a {
-				text-decoration:none;  
 				color:#083D8C;
+				text-decoration:none;  
 			}
 			a:hover{
 				color:pink; 
@@ -224,45 +226,47 @@ button {
 	}
 	.pool-pro{
 		display:inline-block;
-		margin-top:20px;
 		margin-left:90px;     
+		margin-top:20px;
 	}
 }
 //Checklist dropdown for mobile 
 .options {
 	background-color:$white;
 	list-style:none;
-	padding-top:30px;
-	padding-left:30px; 
 	padding-bottom:25px;
+	padding-left:30px; 
+	padding-top:30px;
 	.options:checkbox {
+		color:#3F3F3F;
 		font-family:helvetica; 
 		font-size:16px;
-		color:#3F3F3F;
 	}
 }
 .options li {
 	margin-bottom:35px;
 }
-.options input[type=checkbox] {
-	display:none;
+
+.options {
+	input[type=checkbox] {
+	    display:none;
+	}
+	input[type=checkbox] + label {
+		background: url('/assets/images/commercial-radio-btn.png') left top no-repeat;
+		padding-left: 40px;
+	}
+ 	input[type=checkbox]:checked + label {
+		background: url('/assets/images/service-radio-btn.png') left top no-repeat;
+		display: block;
+		min-height: 23px;
+		padding-left: 50px;
+	}	
 }
 .options label {
+	color:#3F3F3F;
 	font-family:HelveticaNeue2; 
 	font-size:16px;
-	color:#3F3F3F;
 }
-.options input[type=checkbox] + label {
-	background: url('/assets/images/commercial-radio-btn.png') left top no-repeat;
-	padding-left: 40px;
-}
-.options input[type=checkbox]:checked + label {
-	background: url('/assets/images/service-radio-btn.png') left top no-repeat;
-	display: block;
-	min-height: 23px;
-	padding-left: 50px;
-}
-
 
 //Media query for the check list box section 
 
@@ -272,10 +276,10 @@ button {
 	}
 
 	.dropdown-check-list {
-		display:inline-block; 
-		max-width:1279px;
 		border-radius:5px; 
+		display:inline-block; 
 		margin:100px 40px 20px 90px; 
+		max-width:1279px;
 		padding:10px 140px 10px 140px; 
 		.fa-sort-desc {
 			display:none; 
@@ -284,10 +288,10 @@ button {
 	.dropdown-check-list {
 		input {
 			background-color:#F6F6F6;
-			border-left:1px solid #D8D8D8;
-			border-top:none;
-			border-right:none;
 			border-bottom:none; 
+			border-left:1px solid #D8D8D8;
+			border-right:none;
+			border-top:none;
 			padding-top:30px;   
 		}
 		p {
@@ -295,9 +299,9 @@ button {
 		}
 	}
 	.options {
-		padding:0; 
-		display:inline-block; 
 		background-color:#F6F6F6;
+		display:inline-block; 
+		padding:0; 
 		li {
 			display:inline-block;
 			padding-top:20px; 
@@ -312,33 +316,33 @@ button {
 	margin-left:15px; 
 }
 .card-title {
-	font-family:$font-stack-light;
-	text-align:center; 
 	display:block; 
-	padding-top:30px;
+	font-family:$font-stack-light;
 	font-size:20px;   
+	padding-top:30px;
+	text-align:center; 
 }
 .cards hr {
 	display:none; 
 }
 .card-option button {
-	display:block;
-	margin:15px auto;
 	color:#FEFEFE;
-	font-size:20px; 
-	padding-bottom:0;
+	display:block;
 	font-family:$font-stack-bold;
+	font-size:20px; 
+	margin:15px auto;
+	padding-bottom:0;
 		.fa-phone {
-			display:inline-block; 
-			color:#FEFEFE;
 			background-color:#083D8C;
-			padding:5px;
+			color:#FEFEFE;
+			display:inline-block; 
 			margin-bottom:5px;
+			padding:5px;
 		}
 		.tap {
+			display:inline-block;
 			font-family:$font-stack-bold;
 			font-size:9px;
-			display:inline-block;
 		}
 	background-color:#216DDF; 
 }
@@ -347,18 +351,18 @@ button {
 	display:block; 
 	font-family:OpenSans-Italic;
 	font-size:11px;
-	text-align:center;
 	margin:0 auto;  
+	text-align:center;
 }
 
 .contact-pro button {
-	border:1px solid #02C7C6;
-	font-family:$font-stack-bold;
-	color:#083D8C; 
-	font-size:15px;
 	background-color:#FEFEFE;
-	text-transform:none;
+	border:1px solid #02C7C6;
+	color:#083D8C; 
+	font-family:$font-stack-bold;
+	font-size:15px;
 	padding:17px; 
+	text-transform:none;
 
 	.fa-envelope {
 		color:#083D8C;
@@ -369,15 +373,15 @@ button {
 	display:block; 
 }
 .business-hours {
-	text-align:center; 
-	padding-top:20px;
 	padding-bottom:20px; 
+	padding-top:20px;
+	text-align:center; 
 
 	li {
 		font-family:$font-stack-reg; 
 		font-family:13px;
-		margin-bottom:10px;
 		list-style:none;  
+		margin-bottom:10px;
 	}
 	li:first-child {
 		font-family:$font-stack-bold;
@@ -390,12 +394,12 @@ button {
 	padding:25px; 
 }
 .card-footer-list li {
+	color:#3F3F3F; 
 	display:inline-block; 
-	margin-right:40px;
-	padding-bottom:10px; 
 	font-family:$font-stack-reg; 
 	font-size:11px;
-	color:#3F3F3F; 
+	margin-right:40px;
+	padding-bottom:10px; 
 	.fa-star, .fa-sun-o, .fa-home, .fa-users {
 		padding-right:10px;
 	}
@@ -404,44 +408,44 @@ button {
 //Media query for cards section  
 @media (min-width:900px) {
 	.cards {
-		width:$width-full;
 		padding:40px 20px 40px 20px;   
+		width:$width-full;
 	}
 	.card-title {
 		padding-bottom:20px; 
 	}
 	.card-option:nth-child(2n) {
 		.card-title{
-			padding-top:20px;
-			padding-bottom:0;
 			line-height:25px;  
+			padding-bottom:0;
+			padding-top:20px;
 		}
 	}
 	.card-option {
-		max-width:375px; 
-		display:inline-block; 
 		@include  border-radius(10px);
+		display:inline-block; 
+		max-width:375px; 
 			hr {
-		display:block; 
-		width:275px; 
-		margin:0 auto;
-		color:#ECECEC;  
-		}
+			color:#ECECEC;  
+			display:block; 
+			margin:0 auto;
+			width:275px; 
+			}
 	}
 	.card-option button {
 		background-color:$white;
 		border:none;  
-		display:block;
-		margin:15px auto;
 		color:black;
-		font-size:25px; 
-		padding-bottom:0;
+		display:block;
 		font-family:$font-stack-extra-bold;
+		font-size:25px; 
+		margin:15px auto;
+		padding-bottom:0;
 			.fa-phone {
-				display:inline-block; 
-				color:#FEFEFE;
-				background-color:#083D8C;
 				@include border-radius(20px);
+				background-color:#083D8C;
+				color:#FEFEFE;
+				display:inline-block; 
 				font-size:12px;
 				margin-top:0px;   
 			}
@@ -450,13 +454,13 @@ button {
 				} 
 	}
 	.contact-pro button {
-		border:1px solid #02C7C6;
-		font-family:$font-stack-bold;
-		color:#083D8C; 
-		font-size:15px;
 		background-color:#FEFEFE;
-		text-transform:none;
+		border:1px solid #02C7C6;
+		color:#083D8C; 
+		font-family:$font-stack-bold;
+		font-size:15px;
 		padding:17px; 
+		text-transform:none;
 		.fa-envelope {
 			color:#083D8C;
 			margin-right:12px; 
@@ -482,15 +486,15 @@ button {
 	font-size:15px;
 	margin-top:35px; 
 		p {
-			font-family:$font-stack-bold;
 			display:inline-block;
-			text-transform:uppercase;
+			font-family:$font-stack-bold;
 			margin-left:-30px;
 			margin-right:150px; 
+			text-transform:uppercase;
 		}
 		i {
-			margin-right:5px;
 			font-size:20px; 
+			margin-right:5px;
 
 		}
 	}
@@ -499,10 +503,10 @@ button {
 @media (min-width:380px) { 
 	.social-footer {
 		.social-icons {
-			width:375px;
-			margin:0 auto;
 			margin-top:35px;
+			margin:0 auto;
 			padding-left:90px;  
+			width:375px;
 			p{
 				margin-right:50px; 
 			} 
@@ -511,29 +515,28 @@ button {
 }
 .copyright-footer {
 	background-color:#216DDF; 
+	color:$white;
 	font-family:$font-stack-light;
 	font-size:12px;
-	color:$white;
-	text-align:center; 
 	font-weight:100;
-	padding-top:25px; 
-
 	padding-bottom:25px; 
-	padding-right:10px; 
 	padding-left:5px;
+	padding-right:10px; 
+	padding-top:25px; 
+	text-align:center; 
 	width:$width-full;    
 	a {
 		color:$white; 
-		text-decoration:none;
-		margin-right:5px;
 		margin-left:5px;  
+		margin-right:5px;
+		text-decoration:none;
 	} 
 	.fa-external-link {
 		margin-left:5px; 
 	}
 	hr {
-		width:328px; 
 		margin-left:20px; 
+		width:328px; 
 	}
 }
 @media (min-width:380px) { 
@@ -552,10 +555,10 @@ button {
 	display:none; 
 	z-index:99999; 
     background-color: white;
+    left:50%;
+    max-width:405px; 
     position: absolute;
     transform: translateX(-50%);
-    left: 50%;
-    max-width:405px; 
 }
 .form-title {
 	background-color:#083D8C; 
@@ -563,22 +566,22 @@ button {
 	padding:20px 10px 20px 15px; 
 	h1 {
 		font-family:$font-stack-bold;
-		text-transform:uppercase; 
 		font-size:9px;
 		padding-bottom:10px;  
+		text-transform:uppercase; 
 	}
 	p {
-		font-size:20px; 
 		font-family:$font-stack-light; 
+		font-size:20px; 
 		line-height:25px;
 	}
 }
 .fill-out {
-	font-family:$font-stack-reg;
 	color:#616161;
+	font-family:$font-stack-reg;
 	font-size:15px;
-	padding-top:30px;
 	padding-bottom:30px;  	 
+	padding-top:30px;
 }
 .contact-a-pro input, textarea {
 	border:1px solid #D8D8D8; 
@@ -607,9 +610,9 @@ button {
 	max-width:50px; 
 }
 label {
-	font-size:14px; 
 	color:#616161; 
 	font-family:$font-stack-bold;
+	font-size:14px; 
 }
 .contact-a-pro hr {
 	width:345px; 
@@ -617,33 +620,33 @@ label {
 }
 .contact-a-pro button {
 	border:none; 
-	font-size:15px; 
-	font-family:$font-stack-bold; 
 	color:$border-color;
-	text-transform:uppercase; 
 	float:right; 
+	font-family:$font-stack-bold; 
+	font-size:15px; 
 	padding-right:25px; 
+	text-transform:uppercase; 
 }
 .comments p {
 	color:#BEBEBE;
-	font-size:14px;
-	font-family:OpenSans-Italic; 
 	float:right;
+	font-family:OpenSans-Italic; 
+	font-size:14px;
 	padding-right:10px;  
 }
 .comments label {
 	display:inline-block; 
 }
 .comments textarea {
-	margin-bottom:10px;
-	margin-right:10px; 
 	//max-width:317px; 
 	height:84px; 
+	margin-bottom:10px;
+	margin-right:10px; 
 }
 .pool-question-div p {
-	font-size:14px; 
 	color:#616161; 
 	font-family:$font-stack-bold;
+	font-size:14px; 
 	padding-bottom:20px; 
 }
 .pool-question-div {
@@ -654,52 +657,44 @@ input[type=checkbox] {
 }
 input[type=checkbox] + label {
 	background: url("/assets/images/residential-radio-btn-copy.png") bottom left no-repeat;
+	display:inline-block;  
 	min-height: 20px;
 	padding-left: 35px;
-	display:inline-block;  
 }		
 input[type=checkbox]:checked + label {
 	background: url("/assets/images/service-radio-btn.png") no-repeat;
+	display:inline-block; 
 	min-height: 20px;
 	padding-left: 35px;
-	display:inline-block; 
 }
 .check {
 	//display:none; 
 	float:right;
-	padding-right:20px; 
 	padding-bottom:10px;  
+	padding-right:20px; 
 }
 .phone-check {
 	//display:none; 
 	float:right; 
-	padding-right:100px; 
 	padding-bottom:10px; 
+	padding-right:100px; 
 }
-
 	//<img class="check" src="assets/images/circle.png" alt="check"> 
 //Mask background for when the form pops up  
 #mask {
-    display: none;
     background: #000;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    width: 100%;
+    display: none;
     height: 100%;
+    left: 0;
     opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
     z-index: 990;
 }
-/*
-.pool-question label {
-	background: url("/assets/images/service-radio-btn.png") no-repeat;
-	min-height: 20px;
-	padding-left: 35px;
-	padding-top:10px; 
-	display:inline-block; 
-}
-*/
+
+
 
 
 

@@ -42,24 +42,24 @@
 		</header>
 		<section class="filter">
 			<form class="dropdown-check-list" tabindex="100">
-					<p>7 dealers in 29707 </p> 
+					<h1>7 dealers in 29707 </h1>  <!-- Wasn't sure whether to make this <p> or <h1> since I got a warning when validating that it was a p tag--> 
 					<input name="Filter Results" placeholder="Filter Results"><i class="fa fa-sort-desc" aria-hidden="true"></i>
 					<ul class="options">
 						<li >
-							<input type="checkbox" name="results" value="services" class="services" checked />
-							<label class="choice" for="services">Services</label>
+							<input type="checkbox" name="results" value="services" id="services" checked />
+							<label for="services">Services</label>
 						</li>
 						<li>
-							<input type="checkbox" name="results" value="installation" class="installation" checked/>
-							<label class="choice" for="installation">Installation</label>
+							<input type="checkbox" name="results" value="installation" id="installation" checked/>
+							<label for="installation">Installation</label>
 						</li>
 						<li>
-							<input type="checkbox" name="results" value="residential" class="residential" checked/>
-							<label class="choice" for="residential">Residential</label>
+							<input type="checkbox" name="results" value="residential" id="residential" checked/>
+							<label for="residential">Residential</label>
 						</li>
 						<li>
-							<input type="checkbox" name="results" value="commercial" class="commercial"/>
-							<label class="choice" for="commercial">Commercial<i class="fa fa-question-circle" aria-hidden="true"></i></label>
+							<input type="checkbox" name="results" value="commercial" id="commercial"/>
+							<label for="commercial">Commercial<i class="fa fa-question-circle" aria-hidden="true"></i></label>
 						</li>
 					</ul>	
 			</form>
@@ -79,14 +79,13 @@
 				</div>
 			</div>
 			<div class="copyright-footer">
-					<p class="dealers"> <a href="#">Dealers and Distributers</a> | <a href="#">Commercial Service<i class="fa fa-external-link" aria-hidden="true"></i></a></p> 
-					<hr>
-					<p><i class="fa fa-copyright" aria-hidden="true"></i> 2017 Pool Pros | <a href="#">Privacy Policy </a> | <a href="#">Terms and Conditions</a></p>
-				</div>
+				<p class="dealers"> <a href="#">Dealers and Distributers</a> | <a href="#">Commercial Service<i class="fa fa-external-link" aria-hidden="true"></i></a></p> 
+				<hr>
+				<p><i class="fa fa-copyright" aria-hidden="true"></i> 2017 Pool Pros | <a href="#">Privacy Policy </a> | <a href="#">Terms and Conditions</a></p>
 			</div>
 		</footer>
 	</main>
-	<div class="contact-a-pro" class="contact-box">
+	<div class="contact-a-pro">
 		<form class="contact-pro-form" action="message" method="post"> 
 			<div class="form-title">
 				<h1>Email</h1>
@@ -94,31 +93,31 @@
 			</div>
 			<div class="name">
 				<p class="fill-out">Fill out the form below and Premium Pools &#38; Spas of Charlotte will get in touch.</p>
-				<label for="name">First and last Name</i></label>
+				<label for="name">First and last Name</label>
 				<img class="check" src="assets/images/check.png" alt="check">
-				<input class="check-change" type="text" name="first-last-name">
+				<input class="check-change" type="text" name="first-last-name" id="name">
 			</div>
 			<div class="phone">
 				<label for="phone">Phone number</label>
-				<img class="phone-check"src="assets/images/circle.png" alt="check">
-				<input class="check-change" type="text" name="phone-number">
+				<img class="phone-check" src="assets/images/circle.png" alt="check">
+				<input class="check-change" type="text" name="phone-number" id="phone">
 			</div>	
 			<div class="email">
 				<label for="mail">Email address</label>
 				<img class="check" src="assets/images/circle.png" alt="check"> 
-				<input class="check-change" type="email" name="email-address">
+				<input class="check-change" type="email" name="email-address" id="mail">
 			</div>
 			<div class="comments">
 				<label for="comments">Comments or questions</label>
 				<p>optional<p>
-				<textarea name="comments"></textarea> 
+				<textarea name="comments" id="comments"></textarea> 
 			</div>
 			<div class="pool-question-div">
 				<p class="pool-spa">Do you currently own a pool or spa?</p>
-				<input type="checkbox" class="pool-question" name="pool-question" value="yes">
-				<label for="pool-question">Yes</label>
-				<input type="checkbox" class="pool-question" name="pool-question" value="no">
-				<label for="pool-question">No</label> 
+				<input type="checkbox" class="pool-question" name="pool-question" value="yes" id="yes">
+				<label for="yes">Yes</label>
+				<input type="checkbox" class="pool-question" name="pool-question" value="no" id="no">
+				<label for="no" >No</label> 
 			</div>
 			<hr>
 			<button type="submit">Send</button>

@@ -4,13 +4,9 @@
  */
 //This is to make sure js file is working 
 console.log('Main');
-
 ///json Data dealer info 
-
 console.log("json"); 
-
 		$.getJSON("./resources/dealers.json", function (data, status)  {
-				
 				console.log("json2");
 				console.table(data); 	
 				const all = data;
@@ -36,7 +32,7 @@ console.log("json");
 					<li>Business Hours</li>
 						<li>Weekdays: ${dealer.data.weekHours.mon}</li>
 						<li>Saturday: ${dealer.data.weekHours.sat}</li>
-						<li>Sunday: ${dealer.data.weekHours.sun}</li>
+						<li>Sunday: if ${dealer.data.weekHours.sun}</li>
 					</ul>
 				</div>	
 				<div class="card-footer">
@@ -47,42 +43,7 @@ console.log("json");
 					</ul>
 				</div>
 			</div>`);
-
 				});
-			// 		cardWrapper.append (`<div class="card-option">
-			// 	<h1 class=card-title> ${plan.data.name} </h1>
-			// 	<hr>
-			// 	<button type="button"> <i class="fa fa-phone" aria-hidden="true"></i><p class="tap"> Tap to call </p>${dealers}</button>
-			// 	<div class="contact-pro">
-			// 		<p>Can't talk now? Click below to send an email.</p>
-			// 		<button class="js-contact-pro" type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
-			// 	</div>
-			// 	<div class="business-hour-container">
-			// 		<ul class="business-hours js-business-${index}">
-			// 		</ul>
-			// 	</div>	
-			// 	<div class="card-footer">
-			// 		<ul class="card-footer-list">
-			// 			<li><i class="fa fa-star" aria-hidden="true"></i>Installation Pro</li>
-			// 			<li><i class="fa fa-sun-o" aria-hidden="true"></i>Service Pro</li>
-			// 			<li><i class="fa fa-home" aria-hidden="true"></i>Residential Pro</li>
-			// 		</ul>
-			// 	</div>
-			// </div>`);
-
-					// const businessHours = $(`.js-business-${index}`); 
-					// console.log(businessHours);
-					// const hours = all.dealers.weekHours; 
-					// console.log(hours);
-					// hours.forEach(function (hour){
-					// 	console.log(hour);
-					// 	businessHours.append(`<li>${hour}</li>
-					// 	<li>Weekdays 7:00am - 7:00pm</li>
-					// 	<li>Saturdays 7:00am - 3:00pm</li>
-					// 	<li>Sundays - CLOSED</li>`)
-					// });
-				// });	
-
 		});
 
 //This is for the hamburger menu dropdown 
@@ -131,6 +92,10 @@ $(function(){
 	});
 });
 
+
+
+
+
 /*
 $(document).ready(function(){ 
 		console.log("contact-form-up"); 
@@ -142,5 +107,93 @@ $(document).ready(function(){
             $(this).next("img").show();
     	});
 	});
+*/
+
+/*
+<div class="card-option">
+				<h1 class=card-title> Aqua Experts </h1>
+				<hr>
+				<button type="button"> <i class="fa fa-phone" aria-hidden="true"></i><p class="tap"> Tap to call </p>1.888.888.8888</button>
+				<div class="contact-pro">
+					<p>Can't talk now? Click below to send an email.</p>
+					<button class="js-contact-pro" type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
+				</div>
+				<div class="business-hour-container">
+					<ul class="business-hours">
+						<li>Business Hours</li>
+						<li>Weekdays 7:00am - 7:00pm</li>
+						<li>Saturdays 7:00am - 3:00pm</li>
+						<li>Sundays - CLOSED</li>
+					</ul>
+				</div>	
+				<div class="card-footer">
+					<ul class="card-footer-list">
+						<li><i class="fa fa-star" aria-hidden="true"></i>Installation Pro</li>
+						<li><i class="fa fa-sun-o" aria-hidden="true"></i>Service Pro</li>
+						<li><i class="fa fa-home" aria-hidden="true"></i>Residential Pro</li>
+					</ul>
+				</div>
+</div>
+
+
+
+<div class="card-option">
+				<h1 class=card-title> Premium Pools &#38; Spas <br> of Charlotte </h1>
+				<hr>
+				<button type="button"> 
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<p class="tap"> Tap to call </p>
+					1.888.888.8888
+				</button>
+				<div class="contact-pro">
+					<p>Can't talk now? Click below to send an email.</p>
+					<button class="js-contact-pro" type="button"><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
+				</div>
+				<div class="business-hour-container">
+					<ul class="business-hours">
+						<li>Business Hours</li>
+						<li>Weekdays 7:00am - 7:00pm</li>
+						<li>Saturdays 7:00am - 3:00pm</li>
+						<li>Sundays - On Call </li>
+					</ul>
+				</div>	
+				<div class="card-footer">
+					<ul class="card-footer-list">
+						<li><i class="fa fa-star" aria-hidden="true"></i>Installation Pro</li>
+						<li><i class="fa fa-sun-o" aria-hidden="true"></i>Service Pro</li>
+						<li><i class="fa fa-home" aria-hidden="true"></i>Residential Pro</li>
+						<li><i class="fa fa-users" aria-hidden="true"></i>Commericial Pro</li>
+					</ul>
+				</div>
+		</div>
+	<div class="card-option">
+				<h1 class=card-title> Carolina Pool Specialists </h1>
+				<hr>
+				<button type="button"> 
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<p class="tap"> Tap to call </p>
+					1.888.888.8888
+				</button>
+				<div class="contact-pro">
+					<p>Can't talk now? Click below to send an email.</p>
+					<button class="js-contact-pro" type="button" ><i class="fa fa-envelope" aria-hidden="true"></i>Contact this Pro</button>
+				</div>
+				<div class="business-hour-container">
+					<ul class="business-hours">
+						<li>Business Hours</li>
+						<li>Weekdays 7:00am - 7:00pm</li>
+						<li>Saturdays 7:00am - 3:00pm</li>
+						<li>Sundays - 7:00am - 3:00pm</li>
+					</ul>
+				</div>	
+				<div class="card-footer">
+					<ul class="card-footer-list">
+						<li><i class="fa fa-star" aria-hidden="true"></i>Installation Pro</li>
+						<li><i class="fa fa-sun-o" aria-hidden="true"></i>Service Pro</li>
+						<li><i class="fa fa-home" aria-hidden="true"></i>Residential Pro</li>
+						<li><i class="fa fa-users" aria-hidden="true"></i>Commericial Pro</li>
+					</ul>
+				</div>
+		</div>
 */
 
